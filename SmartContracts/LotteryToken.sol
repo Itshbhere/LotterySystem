@@ -6,10 +6,10 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Pausable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 
-contract MyToken is ERC721, ERC721Pausable, Ownable, ERC721URIStorage {
+contract LotteryToken is ERC721, ERC721Pausable, Ownable, ERC721URIStorage {
     uint256 private _nextTokenId;
     mapping(uint256 => address) LotteryWinners;
-    uint256 mintFee = 1 wei;
+    uint256 public mintFee = 1 ether;
 
     constructor(
         address initialOwner
