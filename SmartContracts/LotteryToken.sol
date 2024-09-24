@@ -10,6 +10,7 @@ contract LotteryToken is ERC721, ERC721Pausable, Ownable, ERC721URIStorage {
     uint256 private _nextTokenId;
     mapping(uint256 => address) LotteryWinners;
     uint256 public mintFee = 1 ether;
+    string private InitialIPFS = "burhanledger.com";
 
     constructor(
         address initialOwner
